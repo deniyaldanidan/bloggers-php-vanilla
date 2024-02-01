@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;700&family=Playfair+Display:wght@400;700&display=swap');
+
+:root {
+    /*
+    --text: #050b0c;
+    --background: #f7fbfc;
+    --primary: #47b4c7;
+    --secondary: #8eb7e8;
+    --accent: #f05bdb;
+    */
+
+    --text: 5, 11, 12;
+    --background: 247, 251, 252;
+    --primary: 71, 180, 199;
+    --secondary: 142, 183, 232;
+    --accent: 240, 91, 219;
+    --space: 65px;
+
+    --text-normal: 400;
+    --text-semibold: 500;
+    --text-bold: 700;
+
+    --headtext-normal: 400;
+    --headtext-bold: 700;
+
+    --fontFamily-normal: 'Figtree', sans-serif;
+    --fontFamily-head: 'Playfair Display', serif;
+}
+
+body,
+html {
+    font-size: 1.1rem;
+    scroll-behavior: smooth;
+    margin: 0;
+    background-color: rgb(var(--background));
+    color: rgb(var(--text));
+    font-family: var(--fontFamily-normal);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* height: fit-content; */
+}
+
+* {
+    text-decoration: none;
+    color: inherit;
+    font-family: var(--fontFamily-normal);
+}
+
+header {
+    background-color: rgba(var(--text), 0.075);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px var(--space);
+    height: fit-content;
+
+    .logo {
+        font-size: 1.25rem;
+        font-weight: var(--text-bold);
+    }
+
+    .menus {
+        display: flex;
+        align-items: center;
+        column-gap: 25px;
+
+        .menu {
+            font-size: 1.15rem;
+            font-weight: var(--text-semibold);
+            text-transform: capitalize;
+            border-bottom: solid 2.25px;
+            border-color: transparent;
+            transition: all 100ms ease-in-out;
+
+            &:hover {
+                border-color: rgb(var(--accent));
+                color: rgb(var(--accent));
+            }
+        }
+    }
+}
+
+main {
+    flex-grow: 1;
+    min-height: inherit;
+    padding: calc(var(--space) * 0.6) var(--space) var(--space);
+}
+
+footer {
+    height: fit-content;
+    font-size: 1rem;
+    text-align: center;
+    background-color: rgba(var(--text), 0.075);
+    padding: 20px var(--space);
+}
